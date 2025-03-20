@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock X - Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        /* Add styles for password toggle */
+        .input-box {
+            position: relative;
+        }
+        .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            user-select: none;
+            z-index: 1;
+            color: #666;
+        }
+        .password-toggle:hover {
+            color: #333;
+        }
+        /* Adjust the password input padding to prevent overlap */
+        .input-box input[type="password"],
+        .input-box input[type="text"] {
+            padding-right: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box login">
+            <div class="logo">
+                <i class='bx bx-line-chart'></i>
+                <h2>Stock X</h2>
+            </div>
+            <form action="#" id="loginForm" method="POST">
+                <h1>Welcome Back</h1>
+                <p class="subtitle">Please login to access your portfolio</p>
+                
+                <div class="input-box">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <i class='bx bx-hide password-toggle' id="passwordToggle"></i>
+                </div>
+                
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox" name="remember">
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="btn">Submit</button>
+                
+                <div class="register-link">
+                    <p>Don't have an account? <a href="signup.html">Create Account</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Temporary credentials for testing
+        const TEMP_CREDENTIALS = {
+            email: "demo@stockx.com",
+            password: "StockX123!"
+        };
+
+        // Password toggle functionality
+        const passwordInput = document.getElementById('password');
+        const passwordToggle = document.getElementById('passwordToggle');
+
+        passwordToggle.addEventListener('click', function() {
+            // Toggle password visibility
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+            
+            // Toggle icon
+            this.className = bx ;{type === 'password' ? 'bx-hide' : 'bx-show'} password-toggle;
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (email === TEMP_CREDENTIALS.email && password === TEMP_CREDENTIALS.password) {
+                // Store login state
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userEmail', email);
+                
+                // Redirect to dashboard
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid credentials!\nPlease use:\nEmail: demo@stockx.com\nPassword: StockX123!');
+            }
+        });
+    </script>
+</body>
+</html>

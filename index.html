@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockX - Professional Stock Market Trading Platform</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap and Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./design.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">StockX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#market-stats">Market Stats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="accessibility.html">Accessibility</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="stock_futuristic.mov" type="video/quicktime">
+            <source src="stock_futuristic.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <h1 class="animate-text">Empowering Your <br><span class="highlight">Financial Future</span></h1>
+                        <p class="lead">Experience world-class trading with real-time market insights and professional-grade tools.</p>
+                        <div class="market-ticker">
+                            <div class="ticker-item up">
+                                <span class="symbol">NIFTY 50</span>
+                                <span class="price">19,425.35</span>
+                                <span class="change">+1.2%</span>
+                            </div>
+                            <div class="ticker-item up">
+                                <span class="symbol">SENSEX</span>
+                                <span class="price">64,363.78</span>
+                                <span class="change">+0.9%</span>
+                            </div>
+                        </div>
+                        <div class="cta-buttons">
+                            <a href="login.html" class="btn btn-primary">Start Predicting</a>
+                            <a href="#features" class="btn btn-outline">Explore Platform</a>
+                        </div>
+                        <div class="trust-badges">
+                            <span><i class="bi bi-shield-check"></i> SEBI Registered</span>
+                            <span><i class="bi bi-clock"></i> 24/7 Support</span>
+                            <span><i class="bi bi-graph-up"></i> Live Market Data</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose StockX</h2>
+                <p>Experience the advantage of professional-grade trading tools</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <h3>Advanced Analytics</h3>
+                        <p>Real-time market analysis and predictive modeling tools to inform your trading decisions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-shield-lock"></i>
+                        <h3>Secure Trading</h3>
+                        <p>Bank-grade security protocols and encrypted transactions for your peace of mind.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-lightning"></i>
+                        <h3>Instant Execution</h3>
+                        <p>Lightning-fast trade execution with real-time market order processing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="market-stats" class="market-stats">
+        <div class="container">
+            <div class="section-header">
+                <h2>Market Overview</h2>
+                <p>Stay updated with real-time market statistics</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-card up">
+                        <h4>S&P 500</h4>
+                        <p class="price">4,185.82</p>
+                        <span class="change">+1.23%</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card up">
+                        <h4>NASDAQ</h4>
+                        <p class="price">14,897.24</p>
+                        <span class="change">+0.89%</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card up">
+                        <h4>ADANI PORTS</h4>
+                        <p class="price">1,247.85</p>
+                        <span class="change">+2.45%</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card up">
+                        <h4>LOCKHEED MARTIN</h4>
+                        <p class="price">458.32</p>
+                        <span class="change">+1.45%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stock-search" class="stock-search">
+        <div class="container">
+            <div class="section-header">
+                <h2>Stock Analysis</h2>
+                <p>Search for real-time stock data and company insights</p>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="stockSearch" placeholder="Enter stock symbol (e.g., AAPL, GOOGL)">
+                    <button class="search-btn" id="searchBtn">Search</button>
+                </div>
+            </div>
+            
+            <div class="stock-result" id="stockResult" style="display: none;">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="stock-chart-card">
+                            <div class="chart-header">
+                                <h3 id="stockName">Stock Performance</h3>
+                                <div class="chart-controls">
+                                    <button class="time-btn active" data-period="1d">1D</button>
+                                    <button class="time-btn" data-period="1w">1W</button>
+                                    <button class="time-btn" data-period="1m">1M</button>
+                                    <button class="time-btn" data-period="1y">1Y</button>
+                                </div>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="stockChart"></canvas>
+                            </div>
+                            <div class="stock-info">
+                                <div class="info-item">
+                                    <span class="label">Open</span>
+                                    <span class="value" id="openPrice">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">High</span>
+                                    <span class="value" id="highPrice">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Low</span>
+                                    <span class="value" id="lowPrice">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Volume</span>
+                                    <span class="value" id="volume">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="company-news">
+                            <h3>Latest News</h3>
+                            <div class="news-container" id="newsContainer">
+                                <!-- News items will be dynamically added here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Our expert team is here to help you succeed</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <h5>Location</h5>
+                            <p>Tech Village, Aluva<br>Ernakulam, Kerala</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="bi bi-telephone"></i>
+                            <h5>Phone</h5>
+                            <p>+91 903 741 9520</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="bi bi-envelope"></i>
+                            <h5>Email</h5>
+                            <p>help@stockx.in</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About StockX</h4>
+                    <p>Professional-grade trading platform providing real-time market data and advanced analytics for informed investment decisions.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#market-stats">Market Stats</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Trading Hours</h4>
+                    <p>Monday - Friday<br>9:30 AM - 4:00 PM EST</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/_edwineby_/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StockX. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Stock search functionality
+        const searchBtn = document.getElementById('searchBtn');
+        const stockSearch = document.getElementById('stockSearch');
+        const stockResult = document.getElementById('stockResult');
+        const stockName = document.getElementById('stockName');
+        const stockChart = document.getElementById('stockChart');
+        const newsContainer = document.getElementById('newsContainer');
+        
+        // Alpha Vantage API key
+        const API_KEY = 'JHWWFVKE4TZ7OCBW';
+        
+        let chart = null;
+        let currentSymbol = '';
+
+        // Function to get chart colors based on theme
+        function getChartColors() {
+            return {
+                gridColor: 'rgba(0, 0, 0, 0.1)',
+                textColor: '#666666',
+                borderColor: '#3498db',
+                backgroundColor: 'rgba(52, 152, 219, 0.1)'
+            };
+        }
+
+        // Function to format large numbers
+        function formatNumber(num) {
+            if (num >= 1000000000) {
+                return (num / 1000000000).toFixed(2) + 'B';
+            }
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(2) + 'M';
+            }
+            if (num >= 1000) {
+                return (num / 1000).toFixed(2) + 'K';
+            }
+            return num.toString();
+        }
+
+        // Function to fetch stock data
+        async function fetchStockData(symbol, period) {
+            const endpoint = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${API_KEY}`;
+            
+            try {
+                const response = await fetch(endpoint);
+                const data = await response.json();
+                
+                if (data['Error Message']) {
+                    throw new Error('Invalid symbol. Please check and try again.');
+                }
+                
+                if (data['Note']) {
+                    throw new Error('API limit reached. Please try again in a minute.');
+                }
+                
+                return data;
+            } catch (error) {
+                throw error;
+            }
+        }
+
+        // Function to fetch news
+        async function fetchNews(symbol) {
+            const endpoint = `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=${symbol}&apikey=${API_KEY}`;
+            
+            try {
+                const response = await fetch(endpoint);
+                const data = await response.json();
+                
+                if (data['feed']) {
+                    return data['feed'].slice(0, 5); // Get latest 5 news items
+                }
+                return [];
+            } catch (error) {
+                console.error('News API Error:', error);
+                return [];
+            }
+        }
+
+        // Function to process data
+        function processData(data, period) {
+            const timeSeriesData = data['Time Series (Daily)'];
+            
+            if (!timeSeriesData) {
+                throw new Error('No data available for this symbol.');
+            }
+
+            const dates = Object.keys(timeSeriesData);
+            
+            // Get the most recent dates based on period
+            let filteredDates;
+            switch(period) {
+                case '1d':
+                    filteredDates = dates.slice(0, 1); // Today's data
+                    break;
+                case '1w':
+                    filteredDates = dates.slice(0, 5); // Last 5 trading days
+                    break;
+                case '1m':
+                    filteredDates = dates.slice(0, 22); // Last 22 trading days
+                    break;
+                case '1y':
+                    filteredDates = dates.slice(0, 252); // Last 252 trading days
+                    break;
+                default:
+                    filteredDates = dates.slice(0, 30); // Default to last 30 days
+            }
+
+            if (filteredDates.length === 0) {
+                throw new Error('No data available for this symbol.');
+            }
+
+            // Get prices and format dates
+            const prices = filteredDates.map(date => {
+                const price = timeSeriesData[date]['4. close'];
+                return parseFloat(price);
+            });
+
+            const formattedDates = filteredDates.map(date => {
+                const d = new Date(date);
+                return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            });
+
+            // Update stock info with the latest data
+            const latestDate = filteredDates[0];
+            const latestData = timeSeriesData[latestDate];
+            
+            document.getElementById('openPrice').textContent = `$${parseFloat(latestData['1. open']).toFixed(2)}`;
+            document.getElementById('highPrice').textContent = `$${parseFloat(latestData['2. high']).toFixed(2)}`;
+            document.getElementById('lowPrice').textContent = `$${parseFloat(latestData['3. low']).toFixed(2)}`;
+            document.getElementById('volume').textContent = formatNumber(parseInt(latestData['5. volume']));
+
+            return { dates: formattedDates, prices };
+        }
+
+        // Function to update chart
+        function updateChart(dates, prices) {
+            if (chart) {
+                chart.destroy();
+            }
+
+            const colors = getChartColors();
+            
+            chart = new Chart(stockChart, {
+                type: 'line',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Stock Price',
+                        data: prices,
+                        borderColor: colors.borderColor,
+                        backgroundColor: colors.backgroundColor,
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            backgroundColor: colors.backgroundColor,
+                            titleColor: colors.textColor,
+                            bodyColor: colors.textColor,
+                            borderColor: colors.borderColor,
+                            borderWidth: 1,
+                            callbacks: {
+                                label: function(context) {
+                                    return `$${context.parsed.y.toFixed(2)}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            grid: {
+                                color: colors.gridColor
+                            },
+                            ticks: {
+                                color: colors.textColor,
+                                callback: function(value) {
+                                    return '$' + value.toFixed(2);
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: colors.textColor,
+                                maxRotation: 45,
+                                minRotation: 45,
+                                autoSkip: true,
+                                maxTicksLimit: 10
+                            }
+                        }
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    }
+                }
+            });
+        }
+
+        // Function to update news
+        function updateNews(newsItems) {
+            if (!newsItems || newsItems.length === 0) {
+                newsContainer.innerHTML = '<div class="news-item"><p>No news available at the moment.</p></div>';
+                return;
+            }
+
+            newsContainer.innerHTML = newsItems.map(news => `
+                <div class="news-item">
+                    <h4>${news.title}</h4>
+                    <p>${news.summary}</p>
+                    <a href="${news.url}" target="_blank" class="read-more">Read More</a>
+                </div>
+            `).join('');
+        }
+        
+        // Search button event listener
+        searchBtn.addEventListener('click', async () => {
+            const symbol = stockSearch.value.toUpperCase();
+            if (!symbol) return;
+            
+            try {
+                searchBtn.disabled = true;
+                searchBtn.textContent = 'Loading...';
+                currentSymbol = symbol;
+                
+                // Reset active time period to 1D
+                const timeButtons = document.querySelectorAll('.time-btn');
+                timeButtons.forEach(btn => btn.classList.remove('active'));
+                const oneDayBtn = document.querySelector('.time-btn[data-period="1d"]');
+                if (oneDayBtn) {
+                    oneDayBtn.classList.add('active');
+                }
+                
+                stockName.textContent = `Loading ${symbol} data...`;
+                stockResult.style.display = 'block';
+                
+                // Fetch stock data and news
+                const [data, newsItems] = await Promise.all([
+                    fetchStockData(symbol, '1d'),
+                    fetchNews(symbol)
+                ]);
+                
+                stockName.textContent = symbol;
+                const processedData = processData(data, '1d');
+                updateChart(processedData.dates, processedData.prices);
+                updateNews(newsItems);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                alert(error.message || 'Error fetching stock data. Please check the symbol and try again.');
+                stockResult.style.display = 'none';
+            } finally {
+                searchBtn.disabled = false;
+                searchBtn.textContent = 'Search';
+            }
+        });
+
+        // Time period button event listeners
+        document.querySelectorAll('.time-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                if (!currentSymbol) return;
+                
+                const period = btn.getAttribute('data-period');
+                const originalText = btn.textContent;
+                btn.disabled = true;
+                btn.textContent = 'Loading...';
+                
+                try {
+                    // Update active button
+                    document.querySelectorAll('.time-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const data = await fetchStockData(currentSymbol, period);
+                    const processedData = processData(data, period);
+                    updateChart(processedData.dates, processedData.prices);
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert(error.message || 'Error updating chart. Please try again.');
+                    btn.classList.remove('active');
+                } finally {
+                    btn.disabled = false;
+                    btn.textContent = originalText;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+/* Accessibility Page Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --focus-outline-color: #2980b9;
+}
+
+/* Theme Variables */
+html[data-theme="light"] {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --focus-outline-color: #2980b9;
+    --card-bg: white;
+    --border-color: #ddd;
+    --nav-bg: #2c3e50;
+    --nav-text: white;
+    --theme-toggle-bg: #e9ecef;
+    --theme-toggle-color: #2c3e50;
+}
+
+html[data-theme="dark"] {
+    --primary-color: #64B5F6;
+    --secondary-color: #90CAF9;
+    --background-color: #1a1f2c;
+    --text-color: #e0e0e0;
+    --focus-outline-color: #64B5F6;
+    --card-bg: #2d3748;
+    --border-color: #4a5568;
+    --nav-bg: #2d3748;
+    --nav-text: #e0e0e0;
+    --theme-toggle-bg: #4a5568;
+    --theme-toggle-color: #e0e0e0;
+}
+
+/* Base styles */
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Focus styles */
+*:focus {
+    outline: 3px solid var(--focus-outline-color);
+    outline-offset: 2px;
+}
+
+/* Typography */
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 1em;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 1.5em;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    margin-left: auto;
+    padding: 0 1em;
+}
+
+#themeToggle {
+    background: var(--theme-toggle-bg);
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--theme-toggle-color);
+    transition: background-color 0.3s;
+}
+
+#themeToggle:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+html[data-theme="light"] .dark-icon,
+html[data-theme="dark"] .light-icon {
+    display: none;
+}
+
+/* Theme Section */
+.theme-section {
+    margin: 2em 0;
+    padding: 2em;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-controls {
+    display: flex;
+    gap: 2em;
+    margin-top: 1.5em;
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em 1.5em;
+    border-radius: 8px;
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+    min-width: 150px;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-option:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-option:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="light"] .theme-option.light,
+html[data-theme="dark"] .theme-option.dark {
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.theme-option i {
+    font-size: 1.2rem;
+}
+
+.theme-option span {
+    font-weight: 500;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-bg);
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+nav a {
+    color: var(--nav-text);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--secondary-color);
+}
+
+/* Sections */
+section {
+    margin: 2em 0;
+    padding: 1em;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    background-color: var(--card-bg);
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--nav-text);
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* Form styles */
+.accessibility-form {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--focus-outline-color);
+    background-color: var(--card-bg);
+}
+
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: var(--focus-outline-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .theme-toggle {
+        margin: 1em 0;
+    }
+
+    .theme-controls {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #000;
+        --secondary-color: #00008B;
+        --background-color: #fff;
+        --text-color: #000;
+        --focus-outline-color: #00008B;
+    }
+
+    * {
+        border-color: #000 !important;
+    }
+} 

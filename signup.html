@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock X - Sign Up</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="signup.css">
+    <style>
+        /* Add styles for password toggle */
+        .input-box {
+            position: relative;
+        }
+        .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            user-select: none;
+            z-index: 1;
+            color: #666;
+        }
+        .password-toggle:hover {
+            color: #333;
+        }
+        /* Adjust the password input padding to prevent overlap */
+        .input-box input[type="password"],
+        .input-box input[type="text"] {
+            padding-right: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box signup">
+            <div class="logo">
+                <i class='bx bx-line-chart'></i>
+                <h2>Stock X</h2>
+            </div>
+            <form action="#" id="signupForm" method="POST">
+                <h1>Create Account</h1>
+                <p class="subtitle">Join Stock X to start your investment journey</p>
+                
+                <div class="input-box">
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <i class='bx bx-hide password-toggle' id="passwordToggle"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <i class='bx bx-hide password-toggle' id="confirmPasswordToggle"></i>
+                </div>
+                
+                <div class="terms">
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn">Create Account</button>
+                
+                <div class="login-link">
+                    <p>Already have an account? <a href="login.html">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html> 
